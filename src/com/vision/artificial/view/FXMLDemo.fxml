@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPaneID" prefHeight="455.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vision.artificial.FXMLDemoController">
+   <children>
+      <TabPane fx:id="tbDemo" layoutX="1.0" prefHeight="455.0" prefWidth="655.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Adquisición">
+               <content>
+                  <BorderPane fx:id="bpAdquisicion">
+                     <bottom>
+                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="655.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="btnCargarImagen" onAction="#loadImage" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #FF9800;" text="Subir Imagen" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton onAction="#siguienteTab" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #959595;-fx-margin-left:10px;" text="Siguiente" textFill="WHITE">
+                                  <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </bottom>
+                     <center>
+                        <VBox fx:id="vbImagenOriginal" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab text="Pre-procesamiento">
+               <content>
+                  <BorderPane fx:id="bpPreProcesamiento">
+                    <bottom>
+                      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="655.0" BorderPane.alignment="CENTER">
+                         <children>
+                            <!--JFXButton fx:id="btnCargarImagen" onAction="#loadImage" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #FF9800;" text="Subir Imagen" textFill="WHITE">
+                               <font>
+                                  <Font size="14.0" />
+                               </font>
+                            </JFXButton-->
+                            <JFXButton onAction="#siguienteTab" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #959595;-fx-margin-left:10px;" text="Siguiente" textFill="WHITE">
+                                <font>
+                                  <Font size="14.0" />
+                               </font>
+                            </JFXButton>
+                         </children>
+                      </HBox>
+                   </bottom>
+                   <center>
+                      <HBox fx:id="hbImagenPreProcesada" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+                   </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab text="Segmentación">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <bottom>
+                        <JFXButton onAction="#siguienteTab" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #959595;-fx-margin-left:10px;" text="Siguiente" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </bottom>
+                     <center>
+                        <HBox fx:id="hbImagenSegmentada" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab> 
+            <Tab text="Descripción">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <bottom>
+                        <JFXButton onAction="#siguienteTab" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #959595;-fx-margin-left:10px;" text="Siguiente" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </bottom>
+                     <center>
+                        <HBox fx:id="hbImagenDescripcion" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content></Tab>
+            <Tab text="Reconocimiento e Interpretación">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <HBox fx:id="hbImagenReconocimiento" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
